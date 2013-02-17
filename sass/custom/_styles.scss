@@ -1,2 +1,85 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+
+html {
+  background: $page-bg url(/images/xtr/page.png) top repeat-x;
+}
+
+body {
+  @include box-shadow(#000 0 0 60px);
+
+  > div > div {
+    background: $main-bg;
+  }
+
+  > header {
+    background: $header-bg url(/images/xtr/header.png) top repeat-x;
+    display: table;
+    text-align: center;
+    width: 100%;
+
+    @media only screen and (min-width: 768px) {
+      height: 130px;
+      padding: 0;
+    }
+
+    > hgroup {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+  > nav {
+    background: $nav-bg url(/images/xtr/menu.png) top repeat-x;
+    border: none;
+
+    li + li {
+      border-left: none;
+      a {
+        border-left: none;
+      }
+    }
+
+    a {
+      @include text-shadow(none);
+    }
+  }
+
+  > footer {
+    font-size: 12px;
+    margin-bottom: 0;
+    text-align: center;
+
+    a, a:visited {
+      color: $footer-color;
+    }
+  }
+}
+
+.toggle-sidebar {
+  display: none;
+}
+
+#content .blog-index article header {
+  padding-top: 0;
+}
+
+article {
+
+  header p.meta {
+    color: #666;
+    font-size: 11px;
+    position: static;
+    text-transform: none;
+    a {
+      color: #666;
+    }
+  }
+
+  img, video, .flash-video {
+    @include box-shadow(none);
+    // @include border-radius(0);
+    border: none;
+  }
+}
+
