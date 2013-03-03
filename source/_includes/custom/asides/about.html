@@ -1,4 +1,13 @@
 <section>
-  <h1>About Me</h1>
-  <p>A little something about me.</p>
+  <h1>Автор</h1>
+  <p>
+    Евгений Киров,<br>
+    <small>разработчик в <a href="http://whitescape.com/">Whitescape</a><br>и создатель «<a href="http://tvoeradio.org/">Твоегорадио</a>».</small><br>
+    <small>Продаю инвайты на Gmail.</small>
+    </p>
+  <p>
+    {% for link in site.about_me_links %}
+      <a href="{{link}}" title="{{link|domain}}"><img src="data:image/png;base64,{{link|favicon}}" alt="{{link|domain}}" width="16" height="16"></a>
+    {% endfor %}
+  </p>
 </section>
