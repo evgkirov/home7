@@ -1,4 +1,16 @@
 <div class="sharing">
+  {% if site.vk_like %}
+    <script type="text/javascript" src="//vk.com/js/api/openapi.js?79"></script>
+    <script type="text/javascript">
+      VK.init({apiId: {{site.vk_app_id}}, onlyWidgets: true});
+    </script>
+    <div style="float:left">
+      <div id="vk_like"></div>
+    </div>
+    <script type="text/javascript">
+    VK.Widgets.Like("vk_like", {type: "button", height: 20});
+    </script>
+  {% endif %}
   {% if site.twitter_tweet_button %}
   <a href="http://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ page.url }}" data-via="{{ site.twitter_user }}" data-counturl="{{ site.url }}{{ page.url }}" >Tweet</a>
   {% endif %}
@@ -7,15 +19,5 @@
   {% endif %}
   {% if site.facebook_like %}
     <div class="fb-like" data-send="false" data-layout="button_count" data-width="220" data-show-faces="true" style="position:relative;top: -3px;"></div>
-  {% endif %}
-  {% if site.vk_like %}
-    <script type="text/javascript" src="//vk.com/js/api/openapi.js?79"></script>
-    <script type="text/javascript">
-      VK.init({apiId: {{site.vk_app_id}}, onlyWidgets: true});
-    </script>
-    <div id="vk_like"></div>
-    <script type="text/javascript">
-    VK.Widgets.Like("vk_like", {type: "button"});
-    </script>
   {% endif %}
 </div>
