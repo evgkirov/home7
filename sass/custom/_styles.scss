@@ -84,9 +84,13 @@ article {
   }
 
   img, video, .flash-video {
-    @include box-shadow(none);
-    // @include border-radius(0);
-    border: none;
+    @extend .center;
+    @include shadow-box($border: #fbfbfb .5em solid);
+    padding: 1px;
+  }
+
+  .described-img {
+    @extend img;
   }
 }
 
