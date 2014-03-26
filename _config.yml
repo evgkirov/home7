@@ -65,7 +65,7 @@ github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user: eXtractor
+twitter_user:
 twitter_tweet_count: 4
 twitter_show_replies: false
 twitter_follow_button: true
@@ -105,6 +105,7 @@ vk_app_id: 3450023
 
 # About me
 about_me_links:
+  - https://delicious.com/xtracta
   - http://twitter.com/eXtractor
   - http://facebook.com/evgeniy.kirov
   - http://instagram.com/antikirov
